@@ -18,13 +18,7 @@ import {
   GraduationCap,
   Sparkles
 } from "lucide-react";
-import { 
-  TwitterIcon, 
-  FacebookIcon, 
-  InstagramIcon, 
-  PinterestIcon,
-  LinkedInIcon
-} from "@/components/SocialIcons";
+import { LinkedInIcon } from "@/components/SocialIcons";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -816,49 +810,13 @@ export default function Navbar() {
         {/* Social Icons at Bottom */}
         <div className="flex items-center justify-center gap-6 pt-6 mt-6 border-t border-white/10 text-gray-400">
           <a 
-            href="https://twitter.com/sywaconsultancy" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-[#6bb82d] hover:scale-110 transition-all"
-            aria-label="Twitter"
-          >
-            <TwitterIcon className="w-5 h-5" />
-          </a>
-          <a 
-            href="https://www.facebook.com/sywaconsultancy" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-[#6bb82d] hover:scale-110 transition-all"
-            aria-label="Facebook"
-          >
-            <FacebookIcon className="w-5 h-5" />
-          </a>
-          <a 
-            href="https://www.instagram.com/sywaconsultancy/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-[#6bb82d] hover:scale-110 transition-all"
-            aria-label="Instagram"
-          >
-            <InstagramIcon className="w-5 h-5" />
-          </a>
-          <a 
-            href="https://www.linkedin.com/" 
+            href="https://www.linkedin.com/company/sywaconsultancy/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-[#6bb82d] hover:scale-110 transition-all"
             aria-label="LinkedIn"
           >
             <LinkedInIcon className="w-5 h-5" />
-          </a>
-          <a 
-            href="https://www.pinterest.com/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-[#6bb82d] hover:scale-110 transition-all"
-            aria-label="Pinterest"
-          >
-            <PinterestIcon className="w-5 h-5" />
           </a>
         </div>
       </aside>

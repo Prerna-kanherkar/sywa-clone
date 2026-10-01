@@ -56,47 +56,7 @@ export default function EngineeringConsultingPage() {
         breadcrumb="Engineering Consulting"
       />
 
-      {/* 1. ICT CONSULTING */}
-      <section className="py-20 lg:py-28 bg-white relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="mb-14">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-              ICT Consulting
-            </h2>
-            <p className="text-base sm:text-lg text-[#6bb82d] font-medium italic">
-              “Engineering innovation for a better tomorrow.”
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ictFeatures.map((f, i) => {
-              const Icon = f.icon;
-              return (
-                <div
-                  key={i}
-                  className="bg-gray-50/80 p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="w-12 h-12 rounded-xl bg-green-100/60 text-[#6bb82d] flex items-center justify-center mb-6">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
-                      {f.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                      {f.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 2. MEP ENGINEERING DESIGN CONSULTING */}
+      {/* 1. MEP ENGINEERING DESIGN CONSULTING */}
       <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -150,7 +110,7 @@ export default function EngineeringConsultingPage() {
         </div>
       </section>
 
-      {/* 3. AV CONSULTING */}
+      {/* 2. AV CONSULTING */}
       <section className="py-20 lg:py-28 bg-white relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -334,6 +294,46 @@ export default function EngineeringConsultingPage() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* 6. ICT CONSULTING */}
+      <section className="py-20 lg:py-28 bg-white relative z-10 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-14">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+              ICT Consulting
+            </h2>
+            <p className="text-base sm:text-lg text-[#6bb82d] font-medium italic">
+              “Engineering innovation for a better tomorrow.”
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ictFeatures.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <div
+                  key={i}
+                  className="bg-gray-50/80 p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-green-100/60 text-[#6bb82d] flex items-center justify-center mb-6">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      {f.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                      {f.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
         </div>
       </section>
 

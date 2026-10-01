@@ -8,8 +8,8 @@ export default function TermsPage() {
       <Navbar />
 
       <PageBanner
-        title="TERMS AND POLICIES"
-        breadcrumb="TERMS AND POLICIES"
+        title="Terms and Conditions"
+        breadcrumb="Terms and Conditions"
       />
 
       <section className="py-20 lg:py-28 bg-white relative z-10">

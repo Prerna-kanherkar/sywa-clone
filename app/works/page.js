@@ -120,61 +120,68 @@ export default function WorksPage() {
 
       {/* OUR REVIEWS SECTION */}
       <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10 overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          
-          {/* Header with big "Says" watermark */}
-          <div className="relative mb-16">
-            <span className="absolute -top-12 left-0 text-7xl sm:text-9xl font-extrabold text-gray-200/50 select-none pointer-events-none -z-10">
-              Says
-            </span>
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2">
-              What Our Clients Says
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-              Our Reviews
-            </h2>
-          </div>
-
-          {/* List of Reviews */}
-          <div className="space-y-6">
-            {reviews.map((rev, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col sm:flex-row gap-6 items-start"
-              >
-                <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-green-100">
-                  <Image
-                    src={rev.avatar}
-                    alt={rev.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <div className="flex-1">
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 italic">
-                    "{rev.text}"
-                  </p>
-                  <h4 className="text-sm font-bold text-gray-900">
-                    {rev.name}
-                  </h4>
-                </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* LEFT SIDE: Reviews Content */}
+            <div className="lg:col-span-7">
+              {/* Header with big "Says" watermark */}
+              <div className="relative mb-16">
+                <span className="absolute -top-12 left-0 text-7xl sm:text-9xl font-extrabold text-gray-200/50 select-none pointer-events-none -z-10">
+                  Says
+                </span>
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2">
+                  What Our Clients Says
+                </span>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+                  Our Reviews
+                </h2>
               </div>
-            ))}
+
+              {/* List of Reviews */}
+              <div className="space-y-6">
+                {reviews.map((rev, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col sm:flex-row gap-6 items-start"
+                  >
+                    <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-green-100">
+                      <Image
+                        src={rev.avatar}
+                        alt={rev.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+
+                    <div className="flex-1">
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 italic">
+                        "{rev.text}"
+                      </p>
+                      <h4 className="text-sm font-bold text-gray-900">
+                        {rev.name}
+                      </h4>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT SIDE: Image */}
+            <div className="lg:col-span-5 lg:self-center lg:-translate-y-6">
+              <div className="relative h-[420px] sm:h-[540px] lg:h-[680px] w-full rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/assets/images/testimonials/testimonial-four.jpg"
+                  alt="Two women collaborating"
+                  fill
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-black/10" />
+              </div>
+            </div>
+
           </div>
-
         </div>
-      </section>
-
-      {/* FULL-WIDTH TEAM PHOTO BANNER (Matching our-works.png) */}
-      <section className="relative h-[320px] sm:h-[420px] lg:h-[500px] w-full overflow-hidden">
-        <Image
-          src="/assets/images/testimonials/testimonial-four.jpg"
-          alt="Two women collaborating"
-          fill
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/10" />
       </section>
 
       <Footer />

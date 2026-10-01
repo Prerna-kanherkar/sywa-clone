@@ -3,12 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronUp } from "lucide-react";
-import { 
-  FacebookIcon, 
-  TwitterIcon, 
-  InstagramIcon, 
-  LinkedInIcon 
-} from "@/components/SocialIcons";
+import { LinkedInIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -46,7 +41,7 @@ export default function Footer() {
           {/* Logo Column (3 cols) */}
           <div className="lg:col-span-3">
             <Link href="/" className="inline-block mb-4">
-              <div className="relative w-28 h-20">
+              <div className="relative w-[180px] h-[160px] sm:w-[200px] sm:h-[185px] lg:w-[220px] lg:h-[200px]">
                 <Image
                   src="/assets/images/Sywa-f.png"
                   alt="Sywa Consultancy"
@@ -63,33 +58,6 @@ export default function Footer() {
               Follow Us
             </h4>
             <div className="flex items-center gap-3">
-              <a
-                href="https://www.facebook.com/sywaconsultancy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded bg-[#1c2235] hover:bg-[#6bb82d] text-white flex items-center justify-center transition"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://twitter.com/sywaconsultancy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded bg-[#1c2235] hover:bg-[#6bb82d] text-white flex items-center justify-center transition"
-                aria-label="Twitter"
-              >
-                <TwitterIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.instagram.com/sywaconsultancy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded bg-[#1c2235] hover:bg-[#6bb82d] text-white flex items-center justify-center transition"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="w-4 h-4" />
-              </a>
               <a
                 href="https://www.linkedin.com/company/sywaconsultancy/"
                 target="_blank"
@@ -160,7 +128,7 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3 text-sm text-gray-400">
                 <li>
-                  <Link href="/terms" className="hover:text-white transition">
+                  <Link href="/privacy-policy" className="hover:text-white transition">
                     Privacy Policy
                   </Link>
                 </li>
@@ -170,7 +138,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="hover:text-white transition">
+                  <Link href="/disclaimer" className="hover:text-white transition">
                     Disclaimer
                   </Link>
                 </li>
@@ -183,14 +151,27 @@ export default function Footer() {
 
         {/* Bottom copyright row */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400">
-          <p>© 2023 Sywa consultancy. All rights reserved.</p>
-          <button
-            onClick={scrollToTop}
-            className="mt-4 sm:mt-0 p-2 bg-[#1c2235] hover:bg-[#6bb82d] text-white rounded transition flex items-center gap-1 cursor-pointer"
-            aria-label="Scroll to top"
-          >
-            <ChevronUp className="w-4 h-4" />
-          </button>
+          <p>© 2026 Sywa consultancy. All rights reserved.</p>
+          <div className="flex items-center gap-4 mt-4 sm:mt-0">
+            <p>
+              Created by{" "}
+              <a
+                href="https://www.webseeder.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-[#6bb82d] transition font-medium"
+              >
+                Webseeder Technology
+              </a>
+            </p>
+            <button
+              onClick={scrollToTop}
+              className="p-2 bg-[#1c2235] hover:bg-[#6bb82d] text-white rounded transition flex items-center gap-1 cursor-pointer"
+              aria-label="Scroll to top"
+            >
+              <ChevronUp className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
       </div>
