@@ -63,7 +63,7 @@ export default function EngineeringConsultingPage() {
             
             <div className="lg:col-span-6 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/assets/images/about/faq-page.png"
+                src="/assets/images/services/mep-engineering.jpg"
                 alt="MEP Engineering"
                 fill
                 className="object-cover"
@@ -146,7 +146,7 @@ export default function EngineeringConsultingPage() {
 
             <div className="lg:col-span-6 order-1 lg:order-2 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/assets/images/about/faq-page.png"
+                src="/assets/images/services/av-design-consulting.jpg"
                 alt="AV Consulting"
                 fill
                 className="object-cover"
@@ -164,7 +164,7 @@ export default function EngineeringConsultingPage() {
             
             <div className="lg:col-span-6 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/assets/images/about/faq-page.png"
+                src="/assets/images/services/security-consulting.jpg"
                 alt="Security Consulting"
                 fill
                 className="object-cover"
@@ -242,7 +242,7 @@ export default function EngineeringConsultingPage() {
 
             <div className="lg:col-span-6 order-1 lg:order-2 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/assets/images/about/faq-page.png"
+                src="/assets/images/services/elv-consulting.jpg"
                 alt="ELV Consulting"
                 fill
                 className="object-cover"
@@ -260,7 +260,7 @@ export default function EngineeringConsultingPage() {
             
             <div className="lg:col-span-6 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/assets/images/about/faq-page.png"
+                src="/assets/images/services/acoustic-design-consulting.jpg"
                 alt="Acoustic Design Consulting"
                 fill
                 className="object-cover"
