@@ -17,8 +17,8 @@ export default function DisclaimerPage() {
         breadcrumb="Disclaimer"
       />
 
-      <section className="py-20 lg:py-28 bg-white relative z-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 text-sm sm:text-base leading-relaxed space-y-8">
+      <section className="py-10 sm:py-12 lg:py-16 bg-white relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 text-sm sm:text-base leading-relaxed space-y-6 sm:space-y-7">
           
           <div className="border-b border-gray-100 pb-4">
             <p className="text-xs sm:text-sm font-semibold text-[#6bb82d] uppercase tracking-wider mb-1">

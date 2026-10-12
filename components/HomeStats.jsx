@@ -31,12 +31,12 @@ export default function HomeStats() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#131826] text-white relative z-10">
+    <section className="py-10 sm:py-14 lg:py-16 bg-[#131826] text-white relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-white">
+        <div className="max-w-3xl mb-8 sm:mb-10 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-white">
             A full-fledged Engineering Consulting company
           </h2>
           <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
@@ -51,10 +51,10 @@ export default function HomeStats() {
             return (
               <div 
                 key={index}
-                className="bg-[#1c2235] p-8 rounded-xl border border-gray-800/80 hover:border-[#6bb82d]/50 transition duration-300 group"
+                className="bg-[#1c2235] p-6 sm:p-7 rounded-xl border border-gray-800/80 hover:border-[#6bb82d]/50 transition duration-300 group"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#6bb82d]/10 text-[#6bb82d] flex items-center justify-center mb-6 group-hover:bg-[#6bb82d] group-hover:text-white transition">
-                  <Icon className="w-6 h-6" />
+                <div className="w-11 h-11 rounded-lg bg-[#6bb82d]/10 text-[#6bb82d] flex items-center justify-center mb-4 group-hover:bg-[#6bb82d] group-hover:text-white transition">
+                  <Icon className="w-5 h-5" />
                 </div>
                 
                 <div className="flex items-baseline gap-2 mb-3">

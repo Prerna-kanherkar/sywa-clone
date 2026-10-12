@@ -25,7 +25,7 @@ export default function HomeContact() {
   return (
     <section 
       id="contact" 
-      className="relative py-24 lg:py-32 bg-[#121625] text-white overflow-hidden"
+      className="relative py-10 sm:py-14 lg:py-16 bg-[#121625] text-white overflow-hidden"
     >
       {/* Background Image */}
       <div 
@@ -37,10 +37,10 @@ export default function HomeContact() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#121625]/95 to-[#121625]/85" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* LEFT: Contact Form Card */}
-          <div className="lg:col-span-7 bg-white text-gray-900 rounded-2xl p-8 sm:p-12 shadow-2xl">
+          <div className="lg:col-span-7 bg-white text-gray-900 rounded-2xl p-6 sm:p-10 shadow-2xl">
             {submitted ? (
               <div className="py-12 text-center">
                 <CheckCircle2 className="w-16 h-16 text-[#6bb82d] mx-auto mb-4" />
@@ -97,7 +97,7 @@ export default function HomeContact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#6bb82d] hover:bg-[#5aa025] text-white font-medium py-4 rounded-lg text-sm transition shadow-lg flex items-center justify-center gap-2 uppercase tracking-wide cursor-pointer"
+                  className="w-full bg-[#6bb82d] hover:bg-[#5aa025] text-white font-medium py-3.5 sm:py-4 rounded-lg text-sm transition shadow-lg flex items-center justify-center gap-2 uppercase tracking-wide cursor-pointer"
                 >
                   <span>Send Message</span>
                   <ArrowRight className="w-4 h-4" />
@@ -108,15 +108,15 @@ export default function HomeContact() {
 
           {/* RIGHT: Contact Information */}
           <div className="lg:col-span-5">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-3">
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2 sm:mb-3">
               Let's Talk
             </span>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6 sm:mb-8">
               Get in touch to discuss your next project
             </h2>
 
-            <div className="space-y-8">
+            <div className="space-y-5 sm:space-y-6">
               
               {/* Location */}
               <div className="flex items-start gap-4">

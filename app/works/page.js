@@ -70,14 +70,14 @@ export default function WorksPage() {
       />
 
       {/* OUR PROJECTS SECTION */}
-      <section className="py-20 lg:py-28 bg-white relative z-10">
+      <section className="py-10 sm:py-12 lg:py-16 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[2px] text-gray-500 block mb-2">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[2px] text-gray-500 block mb-1.5">
               Projects and Our Performances
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5">
               Our Projects
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
@@ -86,11 +86,11 @@ export default function WorksPage() {
           </div>
 
           {/* 3 Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((proj, idx) => (
               <div 
                 key={idx}
-                className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-gray-900 h-[380px]"
+                className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 bg-gray-900 h-[320px] sm:h-[350px]"
               >
                 <Image
                   src={proj.image}
@@ -100,14 +100,14 @@ export default function WorksPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                 
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
+                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7 text-white z-10">
                   <span className="text-xs uppercase tracking-widest text-[#6bb82d] font-bold block mb-1">
                     Service
                   </span>
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-[#6bb82d] transition">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 group-hover:text-[#6bb82d] transition">
                     {proj.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed line-clamp-3">
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed line-clamp-2 sm:line-clamp-3">
                     {proj.description}
                   </p>
                 </div>
@@ -119,57 +119,55 @@ export default function WorksPage() {
       </section>
 
       {/* OUR REVIEWS SECTION */}
-      <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10 overflow-hidden">
+      <section className="py-10 sm:py-12 lg:py-16 bg-[#fbfcfb] relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Header with big "Says" watermark */}
+          <div className="relative mb-8 sm:mb-10 max-w-2xl">
+            <span className="absolute -top-10 left-0 text-7xl sm:text-9xl font-extrabold text-gray-200/50 select-none pointer-events-none -z-10">
+              Says
+            </span>
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-1.5">
+              What Our Clients Says
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+              Our Reviews
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative">
             
             {/* LEFT SIDE: Reviews Content */}
-            <div className="lg:col-span-7">
-              {/* Header with big "Says" watermark */}
-              <div className="relative mb-16">
-                <span className="absolute -top-12 left-0 text-7xl sm:text-9xl font-extrabold text-gray-200/50 select-none pointer-events-none -z-10">
-                  Says
-                </span>
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2">
-                  What Our Clients Says
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-                  Our Reviews
-                </h2>
-              </div>
-
-              {/* List of Reviews */}
-              <div className="space-y-6">
-                {reviews.map((rev, index) => (
-                  <div
-                    key={index}
-                    className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col sm:flex-row gap-6 items-start"
-                  >
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-green-100">
-                      <Image
-                        src={rev.avatar}
-                        alt={rev.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-
-                    <div className="flex-1">
-                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 italic">
-                        "{rev.text}"
-                      </p>
-                      <h4 className="text-sm font-bold text-gray-900">
-                        {rev.name}
-                      </h4>
-                    </div>
+            <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+              {reviews.map((rev, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-5 sm:p-6 rounded-2xl border border-gray-100 shadow-xs hover:shadow-md transition flex flex-col sm:flex-row gap-4 sm:gap-5 items-start"
+                >
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-green-100">
+                    <Image
+                      src={rev.avatar}
+                      alt={rev.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                ))}
-              </div>
+
+                  <div className="flex-1">
+                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed mb-3 italic">
+                      "{rev.text}"
+                    </p>
+                    <h4 className="text-xs sm:text-sm font-bold text-gray-900">
+                      {rev.name}
+                    </h4>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* RIGHT SIDE: Image */}
-            <div className="lg:col-span-5 lg:self-center lg:-translate-y-6">
-              <div className="relative h-[420px] sm:h-[540px] lg:h-[680px] w-full rounded-2xl overflow-hidden shadow-xl">
+            {/* RIGHT SIDE: Photo extending alongside reviews */}
+            <div className="lg:col-span-5 flex flex-col">
+              <div className="relative h-[360px] sm:h-[480px] lg:h-full lg:flex-1 w-full rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/assets/images/testimonials/testimonial-four.jpg"
                   alt="Two women collaborating"

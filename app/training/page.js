@@ -26,9 +26,9 @@ export default function TrainingPage() {
       />
 
       {/* TRAINING DETAILS SECTION */}
-      <section className="py-20 lg:py-32 bg-white relative z-10 overflow-hidden">
+      <section className="py-10 sm:py-14 lg:py-18 bg-white relative z-10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* LEFT: Image with blue/purple dot-matrix accent */}
             <div className="lg:col-span-6 relative">
@@ -42,7 +42,7 @@ export default function TrainingPage() {
                 }}
               />
 
-              <div className="relative h-[360px] sm:h-[460px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl z-10">
+              <div className="relative h-[320px] sm:h-[400px] lg:h-[440px] w-full rounded-2xl overflow-hidden shadow-2xl z-10">
                 <Image
                   src="/assets/images/about/why-choose1.jpg"
                   alt="Training Workshop"
@@ -56,20 +56,20 @@ export default function TrainingPage() {
             {/* RIGHT: Content & Green Checkmarks */}
             <div className="lg:col-span-6">
               
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 Training
               </h2>
 
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-8">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
                 SYWA designs customized corporate training programs that align with your organization's business objectives and address individual learning needs.
               </p>
 
               {/* Green checkmark items */}
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {trainingTopics.map((topic, index) => (
-                  <div key={index} className="flex items-center gap-3.5">
-                    <div className="w-6 h-6 rounded-full bg-[#6bb82d] text-white flex items-center justify-center shrink-0 shadow-xs">
-                      <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#6bb82d] text-white flex items-center justify-center shrink-0 shadow-xs">
+                      <CheckCircle2 className="w-3.5 h-3.5 stroke-[2.5]" />
                     </div>
                     <span className="text-sm sm:text-base font-semibold text-gray-800">
                       {topic}

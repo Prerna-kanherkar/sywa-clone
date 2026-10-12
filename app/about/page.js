@@ -110,16 +110,16 @@ export default function AboutPage() {
       />
 
       {/* WHO WE ARE SECTION */}
-      <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+      <section className="py-10 sm:py-12 lg:py-16 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* LEFT: Composite Images + Experience Badge */}
             <div className="lg:col-span-6 relative">
               <div className="relative w-full max-w-lg mx-auto">
                 
                 {/* Main image */}
-                <div className="relative h-[380px] sm:h-[440px] w-[82%] rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative h-[360px] sm:h-[420px] w-[82%] rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/assets/images/about/about-five1.jpg"
                     alt="Engineering Team with tablet"
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Secondary overlapping image */}
-                <div className="absolute right-0 bottom-0 w-[58%] h-[260px] sm:h-[300px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <div className="absolute right-0 bottom-0 w-[58%] h-[240px] sm:h-[280px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                   <Image
                     src="/assets/images/about/about-five2.jpg"
                     alt="Engineer working with plans"
@@ -139,8 +139,8 @@ export default function AboutPage() {
                 </div>
 
                 {/* Experience Green Badge */}
-                <div className="absolute right-8 top-16 sm:top-24 bg-[#6bb82d] text-white p-6 sm:p-8 rounded-xl shadow-xl z-20 max-w-[210px]">
-                  <span className="text-4xl sm:text-5xl font-extrabold block leading-none mb-2">
+                <div className="absolute right-8 top-12 sm:top-20 bg-[#6bb82d] text-white p-5 sm:p-7 rounded-xl shadow-xl z-20 max-w-[200px]">
+                  <span className="text-3xl sm:text-4xl font-extrabold block leading-none mb-1.5">
                     25
                   </span>
                   <h4 className="text-xs sm:text-sm font-semibold leading-tight">
@@ -153,11 +153,11 @@ export default function AboutPage() {
 
             {/* RIGHT: Text Content */}
             <div className="lg:col-span-6">
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-3">
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2 sm:mb-3">
                 WHO WE ARE
               </span>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-5 sm:mb-6">
                 Engineering Solutions That Fit Your Needs!
               </h2>
 
@@ -182,11 +182,11 @@ export default function AboutPage() {
       </section>
 
       {/* WHY SYWA (DARK NAVY SECTION) */}
-      <section className="py-20 lg:py-28 bg-[#131826] text-white relative z-10">
+      <section className="py-10 sm:py-12 lg:py-16 bg-[#131826] text-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
               Why Sywa
             </h2>
             <div className="w-16 h-1 bg-[#6bb82d] mx-auto rounded" />
@@ -198,13 +198,13 @@ export default function AboutPage() {
               return (
                 <div
                   key={index}
-                  className="bg-[#1c2235] p-8 rounded-xl border border-gray-800/80 hover:border-[#6bb82d]/60 transition duration-300 flex flex-col justify-between"
+                  className="bg-[#1c2235] p-6 sm:p-7 rounded-xl border border-gray-800/80 hover:border-[#6bb82d]/60 transition duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-lg bg-[#6bb82d]/10 text-[#6bb82d] flex items-center justify-center mb-6">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-11 h-11 rounded-lg bg-[#6bb82d]/10 text-[#6bb82d] flex items-center justify-center mb-4 sm:mb-5">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
@@ -220,32 +220,32 @@ export default function AboutPage() {
       </section>
 
       {/* OUR WORKFLOW SECTION */}
-      <section className="py-20 lg:py-28 bg-white relative z-10">
+      <section className="py-10 sm:py-12 lg:py-16 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+          <div className="mb-8 sm:mb-10 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
               Our Workflow
             </h2>
             <div className="w-16 h-1 bg-[#6bb82d] rounded" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {workflow.map((step) => {
               const Icon = step.icon;
               return (
                 <div
                   key={step.number}
-                  className="p-8 rounded-xl bg-gray-50 border border-gray-100 hover:border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-between"
+                  className="p-6 sm:p-7 rounded-xl bg-gray-50 border border-gray-100 hover:border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-lg bg-green-100/60 text-[#6bb82d] flex items-center justify-center mb-6">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-11 h-11 rounded-lg bg-green-100/60 text-[#6bb82d] flex items-center justify-center mb-4 sm:mb-5">
+                      <Icon className="w-5 h-5" />
                     </div>
                     <span className="text-xs font-bold text-[#6bb82d] tracking-widest uppercase mb-1 block">
                       Step {step.number}
                     </span>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                       {step.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -261,11 +261,11 @@ export default function AboutPage() {
       </section>
 
       {/* FREQUENTLY ASKED QUESTIONS SECTION */}
-      <section className="py-20 lg:py-24 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
+      <section className="py-10 sm:py-12 lg:py-16 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="mb-12">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2">
+          <div className="mb-6 sm:mb-8">
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-1.5">
               Faqs
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -273,7 +273,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => {
               const isOpen = openFaq === index;
               return (
@@ -283,7 +283,7 @@ export default function AboutPage() {
                 >
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-5 flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-900 hover:text-[#6bb82d] transition cursor-pointer"
+                    className="w-full px-5 py-4 flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-900 hover:text-[#6bb82d] transition cursor-pointer"
                   >
                     <span>{faq.q}</span>
                     <span className="text-[#6bb82d] ml-4 shrink-0">

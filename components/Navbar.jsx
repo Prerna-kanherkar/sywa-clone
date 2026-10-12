@@ -289,10 +289,10 @@ export default function Navbar() {
                       : "opacity-0 invisible -translate-y-2 pointer-events-none"
                   }`}
                 >
-                  <div className="bg-[#101524]/98 backdrop-blur-xl text-white rounded-xl shadow-2xl border border-white/10 overflow-hidden p-2.5">
+                  <div className="bg-white text-gray-900 rounded-xl shadow-2xl border border-gray-100 overflow-hidden p-2.5">
                     
                     {/* Services Header */}
-                    <div className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider flex items-center justify-between border-b border-white/10 mb-1">
+                    <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center justify-between border-b border-gray-100 mb-1">
                       <span>Our Engineering Capabilities</span>
                       <Sparkles className="w-3.5 h-3.5 text-[#6bb82d]" />
                     </div>
@@ -303,21 +303,21 @@ export default function Navbar() {
                       <Link
                         href="/engineering-consulting"
                         onClick={() => setServicesDropdownOpen(false)}
-                        className="group flex items-start gap-3.5 p-3 rounded-lg hover:bg-white/10 transition-all duration-200"
+                        className="group flex items-start gap-3.5 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-[#6bb82d]/20 border border-[#6bb82d]/30 text-[#72c230] flex items-center justify-center shrink-0 group-hover:bg-[#6bb82d] group-hover:text-white transition-colors duration-200">
+                        <div className="w-9 h-9 rounded-lg bg-[#6bb82d]/10 border border-[#6bb82d]/20 text-[#6bb82d] flex items-center justify-center shrink-0 group-hover:bg-[#6bb82d] group-hover:text-white transition-colors duration-200">
                           <Compass className="w-5 h-5" />
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="text-sm font-semibold text-white group-hover:text-[#72c230] transition-colors">
+                            <span className="text-sm font-semibold text-gray-900 group-hover:text-[#6bb82d] transition-colors">
                               Engineering Consulting
                             </span>
-                            <span className="text-[10px] px-1.5 py-0.2 bg-[#6bb82d]/20 text-[#72c230] rounded font-medium border border-[#6bb82d]/40">
+                            <span className="text-[10px] px-1.5 py-0.2 bg-[#6bb82d]/10 text-[#6bb82d] rounded font-medium border border-[#6bb82d]/30">
                               Core
                             </span>
                           </div>
-                          <p className="text-xs text-gray-300 leading-snug mt-0.5">
+                          <p className="text-xs text-gray-600 leading-snug mt-0.5">
                             MEP, HVAC, Electrical, Plumbing & Fire Fighting design solutions.
                           </p>
                         </div>
@@ -327,16 +327,16 @@ export default function Navbar() {
                       <Link
                         href="/staff-resourcing"
                         onClick={() => setServicesDropdownOpen(false)}
-                        className="group flex items-start gap-3.5 p-3 rounded-lg hover:bg-white/10 transition-all duration-200"
+                        className="group flex items-start gap-3.5 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-sky-500/20 border border-sky-500/30 text-sky-400 flex items-center justify-center shrink-0 group-hover:bg-sky-500 group-hover:text-white transition-colors duration-200">
+                        <div className="w-9 h-9 rounded-lg bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center shrink-0 group-hover:bg-sky-500 group-hover:text-white transition-colors duration-200">
                           <Users className="w-5 h-5" />
                         </div>
                         <div>
-                          <span className="text-sm font-semibold text-white group-hover:text-[#72c230] transition-colors block">
+                          <span className="text-sm font-semibold text-gray-900 group-hover:text-[#6bb82d] transition-colors block">
                             Staff Resourcing
                           </span>
-                          <p className="text-xs text-gray-300 leading-snug mt-0.5">
+                          <p className="text-xs text-gray-600 leading-snug mt-0.5">
                             Top-tier engineering experts and CAD/BIM professionals on demand.
                           </p>
                         </div>
@@ -346,16 +346,16 @@ export default function Navbar() {
                       <Link
                         href="/training"
                         onClick={() => setServicesDropdownOpen(false)}
-                        className="group flex items-start gap-3.5 p-3 rounded-lg hover:bg-white/10 transition-all duration-200"
+                        className="group flex items-start gap-3.5 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-200">
+                        <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center shrink-0 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-200">
                           <GraduationCap className="w-5 h-5" />
                         </div>
                         <div>
-                          <span className="text-sm font-semibold text-white group-hover:text-[#72c230] transition-colors block">
+                          <span className="text-sm font-semibold text-gray-900 group-hover:text-[#6bb82d] transition-colors block">
                             Training & Development
                           </span>
-                          <p className="text-xs text-gray-300 leading-snug mt-0.5">
+                          <p className="text-xs text-gray-600 leading-snug mt-0.5">
                             Hands-on MEP engineering and modern BIM certification courses.
                           </p>
                         </div>
@@ -364,11 +364,11 @@ export default function Navbar() {
                     </div>
 
                     {/* Dropdown Footer CTA */}
-                    <div className="mt-2 pt-2 border-t border-white/10 px-2 pb-1">
+                    <div className="mt-2 pt-2 border-t border-gray-100 px-2 pb-1">
                       <Link
                         href="/works"
                         onClick={() => setServicesDropdownOpen(false)}
-                        className="flex items-center justify-between text-xs text-gray-300 hover:text-[#72c230] p-1.5 rounded transition-colors group"
+                        className="flex items-center justify-between text-xs text-gray-600 hover:text-[#6bb82d] hover:bg-gray-50 p-1.5 rounded transition-colors group"
                       >
                         <span>Explore projects & portfolio</span>
                         <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 text-[#6bb82d]" />
@@ -543,25 +543,25 @@ export default function Navbar() {
               </button>
 
               {mobileServicesOpen && (
-                <div className="mt-2 pl-3 space-y-2 border-l-2 border-[#6bb82d]/60 bg-white/[0.02] rounded-r-lg p-2">
+                <div className="mt-2 space-y-1 bg-white rounded-xl p-2 shadow-lg border border-gray-100">
                   <Link
                     href="/engineering-consulting"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-sm text-gray-300 hover:text-[#72c230] transition"
+                    className="block px-3 py-2 text-sm font-medium text-gray-800 hover:text-[#6bb82d] hover:bg-gray-50 rounded-lg transition"
                   >
                     Engineering Consulting
                   </Link>
                   <Link
                     href="/staff-resourcing"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-sm text-gray-300 hover:text-[#72c230] transition"
+                    className="block px-3 py-2 text-sm font-medium text-gray-800 hover:text-[#6bb82d] hover:bg-gray-50 rounded-lg transition"
                   >
                     Staff Resourcing
                   </Link>
                   <Link
                     href="/training"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-sm text-gray-300 hover:text-[#72c230] transition"
+                    className="block px-3 py-2 text-sm font-medium text-gray-800 hover:text-[#6bb82d] hover:bg-gray-50 rounded-lg transition"
                   >
                     Training & Development
                   </Link>

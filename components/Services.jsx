@@ -28,12 +28,12 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10">
+    <section className="py-10 sm:py-14 lg:py-16 bg-[#fbfcfb] relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-3">
             Among the services offered are
           </h2>
           <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
@@ -42,7 +42,7 @@ export default function Services() {
         </div>
 
         {/* Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service) => {
             const Icon = service.icon;
             return (
@@ -51,7 +51,7 @@ export default function Services() {
                 className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
               >
                 {/* Image */}
-                <div className="relative h-64 w-full overflow-hidden">
+                <div className="relative h-52 sm:h-56 lg:h-60 w-full overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -61,7 +61,7 @@ export default function Services() {
                 </div>
 
                 {/* Content Box */}
-                <div className="relative bg-[#6bb82d] text-white p-8 flex-1 flex flex-col justify-between overflow-hidden">
+                <div className="relative bg-[#6bb82d] text-white p-6 sm:p-7 flex-1 flex flex-col justify-between overflow-hidden">
                   
                   {/* Big Watermark Number */}
                   <span className="absolute -right-2 -top-2 text-7xl font-extrabold text-white/15 select-none pointer-events-none">
@@ -70,12 +70,12 @@ export default function Services() {
 
                   <div>
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center mb-6">
-                      <Icon className="w-6 h-6 text-white" />
+                    <div className="w-11 h-11 rounded-lg bg-white/20 flex items-center justify-center mb-4 sm:mb-5">
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-white mb-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-5">
                       {service.title}
                     </h3>
                   </div>

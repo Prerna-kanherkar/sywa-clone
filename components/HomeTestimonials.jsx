@@ -35,13 +35,13 @@ export default function HomeTestimonials() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10 overflow-hidden">
+    <section className="py-10 sm:py-14 lg:py-16 bg-[#fbfcfb] relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* LEFT: Image */}
           <div className="lg:col-span-6 relative">
-            <div className="relative h-[360px] sm:h-[450px] lg:h-[500px] w-full">
+            <div className="relative h-[300px] sm:h-[380px] lg:h-[420px] w-full">
               <Image
                 src="/assets/images/testimonials/testimonials-three.png"
                 alt="Testimonials"
@@ -53,15 +53,15 @@ export default function HomeTestimonials() {
 
           {/* RIGHT: Slider Content */}
           <div className="lg:col-span-6">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-3">
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2 sm:mb-3">
               Our Testimonials
             </span>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-5 sm:mb-6">
               What Our Clients Say About Solutions
             </h2>
 
-            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100 relative">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100 relative">
               <Quote className="w-12 h-12 text-[#6bb82d]/20 absolute right-6 top-6" />
 
               <div className="flex items-center gap-1 mb-4">

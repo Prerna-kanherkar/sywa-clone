@@ -21,21 +21,21 @@ export default function HomeInnovation() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white relative z-10">
+    <section className="py-10 sm:py-14 lg:py-16 bg-white relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* LEFT: Intro */}
           <div className="lg:col-span-5">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-3">
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-[2px] text-[#6bb82d] block mb-2 sm:mb-3">
               Best Consultants
             </span>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
               We integrate innovation into everything we do
             </h2>
 
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-8">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
               Approaching every project with a high-performance design strategy
             </p>
 
@@ -49,13 +49,13 @@ export default function HomeInnovation() {
           </div>
 
           {/* RIGHT: Value Cards */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             {values.map((v, i) => {
               const Icon = v.icon;
               return (
                 <div 
                   key={i}
-                  className="p-6 sm:p-8 rounded-xl bg-gray-50 border border-gray-100 hover:border-green-200 hover:shadow-lg transition duration-300 flex flex-col sm:flex-row gap-6 items-start"
+                  className="p-5 sm:p-6 rounded-xl bg-gray-50 border border-gray-100 hover:border-green-200 hover:shadow-lg transition duration-300 flex flex-col sm:flex-row gap-4 sm:gap-5 items-start"
                 >
                   <div className="w-12 h-12 rounded-xl bg-green-100/60 text-[#6bb82d] flex items-center justify-center shrink-0">
                     <Icon className="w-6 h-6" />

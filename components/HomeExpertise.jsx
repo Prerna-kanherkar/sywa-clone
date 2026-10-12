@@ -20,7 +20,7 @@ export default function HomeExpertise() {
   ];
 
   return (
-    <section className="relative py-24 lg:py-32 bg-[#121625] text-white overflow-hidden">
+    <section className="relative py-10 sm:py-14 lg:py-16 bg-[#121625] text-white overflow-hidden">
       
       {/* Background Image */}
       <div 
@@ -34,9 +34,9 @@ export default function HomeExpertise() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Top Header Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-8 sm:mb-10 lg:mb-12">
           <div className="lg:col-span-8">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-3 sm:mb-4">
               Our Expertise
             </h2>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">

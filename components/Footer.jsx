@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#111522] text-white pt-16 pb-6 overflow-hidden z-10">
+    <footer className="relative bg-[#111522] text-white pt-10 sm:pt-12 lg:pt-14 pb-6 overflow-hidden z-10">
       
       {/* Background decorative waves / shapes */}
       <div className="absolute right-0 bottom-0 pointer-events-none opacity-40 select-none">
@@ -36,12 +36,12 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-gray-800/80">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-8 sm:pb-10 border-b border-gray-800/80">
           
           {/* Logo Column (3 cols) */}
           <div className="lg:col-span-3">
             <Link href="/" className="inline-block mb-4">
-              <div className="relative w-[180px] h-[160px] sm:w-[200px] sm:h-[185px] lg:w-[220px] lg:h-[200px]">
+              <div className="relative w-[180px] h-[80px] sm:w-[200px] sm:h-[90px] lg:w-[220px] lg:h-[100px]">
                 <Image
                   src="/assets/images/Sywa-f.png"
                   alt="Sywa Consultancy"
@@ -153,13 +153,13 @@ export default function Footer() {
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400">
           <p>© 2026 Sywa consultancy. All rights reserved.</p>
           <div className="flex items-center gap-4 mt-4 sm:mt-0">
-            <p>
+            <p className="text-gray-200 font-medium">
               Created by{" "}
               <a
                 href="https://www.webseeder.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#6bb82d] transition font-medium"
+                className="text-[#72c230] hover:text-white font-semibold transition-colors duration-200 underline decoration-[#72c230]/50 hover:decoration-white underline-offset-4"
               >
                 Webseeder Technology
               </a>

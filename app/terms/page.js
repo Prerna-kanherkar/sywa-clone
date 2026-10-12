@@ -12,12 +12,17 @@ export default function TermsPage() {
         breadcrumb="Terms and Conditions"
       />
 
-      <section className="py-20 lg:py-28 bg-white relative z-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 text-sm sm:text-base leading-relaxed space-y-6">
+      <section className="py-10 sm:py-12 lg:py-16 bg-white relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 text-sm sm:text-base leading-relaxed space-y-6 sm:space-y-7">
           
-          <p className="text-gray-500 font-medium">
-            Last updated: 2023-02-03
-          </p>
+          <div className="border-b border-gray-100 pb-4">
+            <p className="text-xs sm:text-sm font-semibold text-[#6bb82d] uppercase tracking-wider mb-1">
+              Terms & Conditions
+            </p>
+            <p className="text-gray-500 text-sm">
+              Last updated: 2023-02-03
+            </p>
+          </div>
 
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">1. Introduction</h3>

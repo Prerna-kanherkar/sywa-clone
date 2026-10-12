@@ -57,11 +57,11 @@ export default function EngineeringConsultingPage() {
       />
 
       {/* 1. MEP ENGINEERING DESIGN CONSULTING */}
-      <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
+      <section className="py-8 sm:py-10 lg:py-12 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div className="lg:col-span-6 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="lg:col-span-6 relative h-[300px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/assets/images/services/mep-engineering.jpg"
                 alt="MEP Engineering"
@@ -71,14 +71,14 @@ export default function EngineeringConsultingPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
                 MEP Engineering Design Consulting
               </h2>
-              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-6">
+              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-4">
                 “Engineering efficient spaces through intelligent design.”
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
                 {[
                   "Mechanical Engineering & HVAC Design",
                   "Electrical Power & Lighting Design",
@@ -96,7 +96,7 @@ export default function EngineeringConsultingPage() {
                 ))}
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <div className="space-y-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
                 <p>
                   MEP systems form the backbone of every successful building, ensuring comfort, safety, functionality, and operational efficiency. Our MEP engineering team provides integrated design solutions tailored to the unique requirements of each development, from concept and feasibility through detailed design, tender documentation, construction support, and commissioning.
                 </p>
@@ -111,19 +111,19 @@ export default function EngineeringConsultingPage() {
       </section>
 
       {/* 2. AV CONSULTING */}
-      <section className="py-20 lg:py-28 bg-white relative z-10 border-t border-gray-100">
+      <section className="py-8 sm:py-10 lg:py-12 bg-white relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
                 AV Consulting
               </h2>
-              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-6">
+              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-4">
                 “Executives across the board routinely seek out SYWA’s insights that go far beyond the technical & deep into the heart of performance maximization.”
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
                 {[
                   "Comprehensive UI/UX Assessment",
                   "Deep Contextual Research & Planning",
@@ -144,7 +144,7 @@ export default function EngineeringConsultingPage() {
               </p>
             </div>
 
-            <div className="lg:col-span-6 order-1 lg:order-2 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="lg:col-span-6 order-1 lg:order-2 relative h-[300px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/assets/images/services/av-design-consulting.jpg"
                 alt="AV Consulting"
@@ -158,11 +158,11 @@ export default function EngineeringConsultingPage() {
       </section>
 
       {/* 4. SECURITY CONSULTING */}
-      <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
+      <section className="py-8 sm:py-10 lg:py-12 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div className="lg:col-span-6 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="lg:col-span-6 relative h-[300px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/assets/images/services/security-consulting.jpg"
                 alt="Security Consulting"
@@ -172,14 +172,14 @@ export default function EngineeringConsultingPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
                 Security Consulting
               </h2>
-              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-6">
+              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-4">
                 “Designing solutions, building success.”
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
                 {[
                   "Access Control System",
                   "Intercom System",
@@ -205,19 +205,19 @@ export default function EngineeringConsultingPage() {
       </section>
 
       {/* 5. ELV CONSULTING */}
-      <section className="py-20 lg:py-28 bg-white relative z-10 border-t border-gray-100">
+      <section className="py-8 sm:py-10 lg:py-12 bg-white relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
                 ELV Consulting
               </h2>
-              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-6">
+              <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic mb-4">
                 “Innovative engineering for a connected world.”
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
                 {[
                   "Fire Alarm System",
                   "Master Clock System",
@@ -240,7 +240,7 @@ export default function EngineeringConsultingPage() {
               </p>
             </div>
 
-            <div className="lg:col-span-6 order-1 lg:order-2 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="lg:col-span-6 order-1 lg:order-2 relative h-[300px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/assets/images/services/elv-consulting.jpg"
                 alt="ELV Consulting"
@@ -254,11 +254,11 @@ export default function EngineeringConsultingPage() {
       </section>
 
       {/* 6. ACOUSTIC DESIGN CONSULTING */}
-      <section className="py-20 lg:py-28 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
+      <section className="py-8 sm:py-10 lg:py-12 bg-[#fbfcfb] relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div className="lg:col-span-6 relative h-[360px] sm:h-[460px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="lg:col-span-6 relative h-[300px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/assets/images/services/acoustic-design-consulting.jpg"
                 alt="Acoustic Design Consulting"
@@ -268,11 +268,11 @@ export default function EngineeringConsultingPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-5">
                 Acoustic Design Consulting
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
                 {[
                   "Building Acoustics",
                   "Architectural Acoustics",
@@ -298,31 +298,31 @@ export default function EngineeringConsultingPage() {
       </section>
 
       {/* 6. ICT CONSULTING */}
-      <section className="py-20 lg:py-28 bg-white relative z-10 border-t border-gray-100">
+      <section className="py-8 sm:py-10 lg:py-12 bg-white relative z-10 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="mb-14">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+          <div className="mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
               ICT Consulting
             </h2>
-            <p className="text-base sm:text-lg text-[#6bb82d] font-medium italic">
+            <p className="text-sm sm:text-base text-[#6bb82d] font-medium italic">
               “Engineering innovation for a better tomorrow.”
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ictFeatures.map((f, i) => {
               const Icon = f.icon;
               return (
                 <div
                   key={i}
-                  className="bg-gray-50/80 p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-between"
+                  className="bg-gray-50/80 p-6 sm:p-7 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl transition duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-green-100/60 text-[#6bb82d] flex items-center justify-center mb-6">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-11 h-11 rounded-xl bg-green-100/60 text-[#6bb82d] flex items-center justify-center mb-4 sm:mb-5">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                       {f.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
