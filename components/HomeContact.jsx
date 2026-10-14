@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Mail, Phone, ArrowRight, CheckCircle2 } from "lucide-react";
+import { MapPin, Mail, Phone, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
+import { sendEmail } from "@/lib/emailjs";
 
 export default function HomeContact() {
   const [formData, setFormData] = useState({
@@ -10,16 +11,38 @@ export default function HomeContact() {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    if (isSubmitting) return;
+
+    setErrorMessage("");
+
+    try {
+      setIsSubmitting(true);
+      await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        formName: "Contact Us Inquiry",
+      });
+
+      setSubmitted(true);
       setFormData({ name: "", phone: "", email: "", message: "" });
-    }, 3000);
+    } catch (error) {
+      console.error("Failed to send contact form:", error);
+      const msg =
+        error?.text ||
+        error?.message ||
+        "Unable to send your message right now. Please try again or email us directly at info@sywaconsult.com.";
+      setErrorMessage(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -42,24 +65,39 @@ export default function HomeContact() {
           {/* LEFT: Contact Form Card */}
           <div className="lg:col-span-7 bg-white text-gray-900 rounded-2xl p-6 sm:p-10 shadow-2xl">
             {submitted ? (
-              <div className="py-12 text-center">
+              <div className="py-12 text-center animate-in zoom-in-95 duration-200">
                 <CheckCircle2 className="w-16 h-16 text-[#6bb82d] mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                <p className="text-gray-600 text-sm">
-                  Thank you for reaching out. We will get back to you shortly.
+                <p className="text-gray-600 text-sm max-w-md mx-auto">
+                  Thank you for reaching out. We will review your message and get back to you shortly.
                 </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="mt-6 inline-flex items-center gap-1.5 text-xs text-[#6bb82d] hover:text-[#5aa025] font-semibold underline underline-offset-4 cursor-pointer"
+                >
+                  Send another message
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
+                {errorMessage && (
+                  <div className="p-3.5 bg-red-50 border border-red-200 text-red-700 rounded-lg text-xs flex items-start gap-2.5">
+                    <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-500" />
+                    <span className="flex-1 leading-relaxed">{errorMessage}</span>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <input
                       type="text"
-                      placeholder="Full name"
+                      placeholder="Full name *"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition disabled:opacity-60 disabled:bg-gray-50"
                     />
                   </div>
                   <div>
@@ -68,7 +106,8 @@ export default function HomeContact() {
                       placeholder="Phone Number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition disabled:opacity-60 disabled:bg-gray-50"
                     />
                   </div>
                 </div>
@@ -76,31 +115,43 @@ export default function HomeContact() {
                 <div>
                   <input
                     type="email"
-                    placeholder="Email"
+                    placeholder="Email *"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
-                    className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition disabled:opacity-60 disabled:bg-gray-50"
                   />
                 </div>
 
                 <div>
                   <textarea
                     rows={4}
-                    placeholder="Message"
+                    placeholder="Message *"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
-                    className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition resize-none"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition resize-none disabled:opacity-60 disabled:bg-gray-50"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#6bb82d] hover:bg-[#5aa025] text-white font-medium py-3.5 sm:py-4 rounded-lg text-sm transition shadow-lg flex items-center justify-center gap-2 uppercase tracking-wide cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#6bb82d] hover:bg-[#5aa025] text-white font-medium py-3.5 sm:py-4 rounded-lg text-sm transition shadow-lg flex items-center justify-center gap-2 uppercase tracking-wide cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
-                  <ArrowRight className="w-4 h-4" />
+                  {isSubmitting ? (
+                    <>
+                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span>Sending Message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Send Message</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
             )}

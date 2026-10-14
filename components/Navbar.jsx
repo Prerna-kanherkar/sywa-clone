@@ -8,6 +8,7 @@ import {
   ChevronDown, 
   X, 
   CheckCircle2, 
+  AlertCircle,
   ArrowRight,
   Phone,
   Mail,
@@ -19,6 +20,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { LinkedInIcon } from "@/components/SocialIcons";
+import { sendEmail } from "@/lib/emailjs";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -33,6 +35,7 @@ export default function Navbar() {
   const [appointmentOpen, setAppointmentOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Appointment Form state
   const [formData, setFormData] = useState({
@@ -137,26 +140,47 @@ export default function Navbar() {
     return pathname === path;
   };
 
-  const handleAppointmentSubmit = (e) => {
+  const handleAppointmentSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) return;
+    if (isSubmitting) return;
 
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setErrorMessage("");
+
+    try {
+      setIsSubmitting(true);
+      await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        formName: "Quick Consultation & Appointment",
+      });
+
       setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "Engineering Consulting",
+        message: ""
+      });
+
+      // Keep drawer open briefly to display confirmation, then close
       setTimeout(() => {
         setSubmitted(false);
         setAppointmentOpen(false);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          service: "Engineering Consulting",
-          message: ""
-        });
-      }, 2500);
-    }, 700);
+      }, 3500);
+    } catch (error) {
+      console.error("Failed to submit appointment:", error);
+      const msg =
+        error?.text ||
+        error?.message ||
+        "Unable to send your appointment request. Please try again or email us directly at info@sywaconsult.com.";
+      setErrorMessage(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -686,9 +710,26 @@ export default function Navbar() {
               <p className="text-xs text-gray-300 mt-2 leading-relaxed">
                 Thank you! Our engineering team will review your requirements and reach out to you shortly.
               </p>
+              <button
+                type="button"
+                onClick={() => {
+                  setSubmitted(false);
+                  setAppointmentOpen(false);
+                }}
+                className="mt-4 text-xs text-[#6bb82d] hover:text-[#5aa025] font-semibold underline underline-offset-4 cursor-pointer"
+              >
+                Done
+              </button>
             </div>
           ) : (
             <form onSubmit={handleAppointmentSubmit} className="space-y-4">
+              {errorMessage && (
+                <div className="p-3 bg-red-950/50 border border-red-500/60 rounded-lg text-xs text-red-200 flex items-start gap-2.5">
+                  <AlertCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+                  <span className="flex-1 leading-relaxed">{errorMessage}</span>
+                </div>
+              )}
+
               <div>
                 <label className="block text-xs font-medium text-gray-300 mb-1.5">
                   Your Full Name *
@@ -699,7 +740,8 @@ export default function Navbar() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition disabled:opacity-60"
                 />
               </div>
 
@@ -713,7 +755,8 @@ export default function Navbar() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition disabled:opacity-60"
                 />
               </div>
 
@@ -726,7 +769,8 @@ export default function Navbar() {
                   placeholder="e.g. +971 50 123 4567"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition disabled:opacity-60"
                 />
               </div>
 
@@ -738,7 +782,8 @@ export default function Navbar() {
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition appearance-none cursor-pointer"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition appearance-none cursor-pointer disabled:opacity-60"
                   >
                     <option value="Engineering Consulting">Engineering Consulting (MEP)</option>
                     <option value="Staff Resourcing">Staff Resourcing</option>
@@ -758,14 +803,15 @@ export default function Navbar() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition resize-none"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#192033] border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#6bb82d] focus:ring-1 focus:ring-[#6bb82d] transition resize-none disabled:opacity-60"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#6bb82d] hover:bg-[#5aa025] text-white font-semibold py-3.5 rounded-lg text-sm transition-all duration-200 shadow-lg shadow-green-900/30 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
+                className="w-full bg-[#6bb82d] hover:bg-[#5aa025] text-white font-semibold py-3.5 rounded-lg text-sm transition-all duration-200 shadow-lg shadow-green-900/30 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
